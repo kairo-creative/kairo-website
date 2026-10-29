@@ -1,6 +1,8 @@
 "use client";
+import { useLanguage } from "./Language";
 import Arrow from "./Arrow";
 export default function ContactCTA() {
+  const { t } = useLanguage();
   return (
     <button
       className="button outlined"
@@ -21,7 +23,7 @@ export default function ContactCTA() {
         }
       }}
     >
-      Neem contact op <Arrow />
+      {t("Neem contact op")} <Arrow />
     </button>
   );
 }

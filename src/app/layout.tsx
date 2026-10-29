@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "@fontsource/montserrat/500.css";
 import "@fontsource/montserrat/600.css";
 import "./globals.css";
+import { LanguageProvider } from "../components/Language";
+import SkipLink from "../components/SkipLink";
 const seasons = localFont({
   src: [
     {
@@ -32,10 +34,10 @@ export default function RootLayout({
   return (
     <html lang="nl" className={seasons.variable}>
       <body>
-        <a className="skip-link" href="#main">
-          Ga naar inhoud
-        </a>
-        {children}
+        <LanguageProvider>
+          <SkipLink />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

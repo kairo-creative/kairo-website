@@ -1,8 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "./Language";
 import { navigation } from "../content/home";
 import { asset } from "../lib/assets";
 export default function Header() {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const nav = useRef<HTMLElement>(null);
@@ -55,7 +58,7 @@ export default function Header() {
       <nav
         ref={nav}
         id="main-navigation"
-        aria-label="Hoofdnavigatie"
+        aria-label={t("Hoofdnavigatie")}
         className={open ? "navigation is-open" : "navigation"}
       >
         {navigation.map((item) => (
@@ -64,19 +67,14 @@ export default function Header() {
           </a>
         ))}
       </nav>
-      <span className="language" aria-label="Huidige taal: Nederlands">
-        NL{" "}
-        <svg width="20" height="12" viewBox="0 0 20 12" aria-hidden="true">
-          <path d="m1 2 9 8 9-8" stroke="currentColor" fill="none" />
-        </svg>
-      </span>
+      <LanguageSwitcher />
       <button
         ref={trigger}
         className="menu-toggle"
         aria-expanded={open}
         aria-controls="main-navigation"
         onClick={() => setOpen(!open)}
-        aria-label={open ? "Menu sluiten" : "Menu openen"}
+        aria-label={t(open ? "Menu sluiten" : "Menu openen")}
       >
         <span /> <span />
       </button>

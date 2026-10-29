@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { asset } from "../lib/assets";
+import { useLanguage } from "./Language";
 import Arrow from "./Arrow";
 export default function Hero() {
+  const { t } = useLanguage();
   const section = useRef<HTMLElement>(null);
   const image = useRef<HTMLImageElement>(null);
   useEffect(() => {
@@ -63,16 +65,17 @@ export default function Hero() {
           in God’s Timing.
         </h1>
         <p className="hero-description">
-          Wij brengen merken tot leven met
-          <br className="desktop-break" /> doordacht design, creative direction
-          <br className="desktop-break" /> en visuele storytelling.
+          {t("Wij brengen merken tot leven met")}
+          <br className="desktop-break" />{" "}
+          {t("doordacht design, creative direction")}
+          <br className="desktop-break" /> {t("en visuele storytelling.")}
         </p>
         <div className="hero-actions">
           <a className="button filled" href="#work">
-            Bekijk ons werk <Arrow />
+            {t("Bekijk ons werk")} <Arrow />
           </a>
           <a className="button outlined" href="#services">
-            Onze services <Arrow />
+            {t("Onze services")} <Arrow />
           </a>
         </div>
       </div>

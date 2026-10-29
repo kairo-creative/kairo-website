@@ -113,15 +113,30 @@ export default function Home() {
             ))}
           </nav>
           <div className="socials" aria-label="Sociale kanalen">
-            <span aria-label="Instagram — link volgt" role="img">
+            <a
+              href="https://www.instagram.com/kairocreativeagency/"
+              aria-label="Instagram (opent in nieuw tabblad)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram />
-            </span>
-            <span aria-label="TikTok — link volgt" role="img">
+            </a>
+            <a
+              href="https://www.tiktok.com/@kairocreativeagency?lang=nl-NL"
+              aria-label="TikTok (opent in nieuw tabblad)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Music2 />
-            </span>
-            <span aria-label="LinkedIn — link volgt" role="img">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jill-sances-b3b1991a4/"
+              aria-label="LinkedIn (opent in nieuw tabblad)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin />
-            </span>
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
@@ -132,7 +147,7 @@ export default function Home() {
         </div>
         <details id="contact-details" className="contact-details">
           <summary>Contactgegevens</summary>
-          <p>Contactgegevens en sociale links worden binnenkort toegevoegd.</p>
+          <p>Contactgegevens worden binnenkort toegevoegd.</p>
         </details>
       </footer>
     </>

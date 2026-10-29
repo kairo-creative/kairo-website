@@ -1,0 +1,391 @@
+.navigation a[aria-current="page"]:after {
+  transform: scaleX(1);
+}
+.about-page {
+  padding-top: var(--header);
+}
+.about-hero {
+  height: 660px;
+  position: relative;
+  overflow: hidden;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+}
+.about-hero-image {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 70px);
+  inset: -35px 0 auto;
+  object-fit: cover;
+  max-width: none;
+  will-change: transform;
+}
+.about-hero-copy {
+  position: relative;
+  z-index: 1;
+  margin-left: var(--gutter);
+  padding-block: 50px;
+}
+.about-hero .eyebrow {
+  margin-bottom: 24px;
+}
+.about-hero h1 {
+  font-size: clamp(58px, 5.55vw, 88px);
+  line-height: 0.99;
+}
+.about-rule {
+  width: 74px;
+  height: 1px;
+  background: currentColor;
+  margin: 40px 0 30px;
+}
+.about-introduction {
+  max-width: 470px;
+  font-size: 19px;
+  line-height: 1.28;
+}
+.about-quote {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px var(--gutter);
+  background: var(--espresso);
+  color: var(--cream);
+}
+.about-quote blockquote {
+  margin: 0;
+  font-family: var(--font-seasons), Georgia, serif;
+  font-size: 44px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-copy {
+  padding: 72px var(--gutter) 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-copy .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-bottom: 22px;
+}
+.about-copy h2 {
+  font-size: 52px;
+  line-height: 1.02;
+  margin-bottom: 32px;
+}
+.about-copy > p:not(.eyebrow) {
+  font-size: 18px;
+  line-height: 1.32;
+}
+.about-copy > p:not(.eyebrow) + p:not(.eyebrow) {
+  margin-top: 24px;
+}
+.about-image {
+  overflow: hidden;
+  min-width: 0;
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+.about-story {
+  min-height: 560px;
+  background: var(--cream);
+}
+.about-founder {
+  min-height: 700px;
+  background: #fff;
+}
+.about-founder .about-copy {
+  padding: 65px 6.5vw 65px 6vw;
+}
+.about-founder .founder-signature {
+  margin: 34px 0 0;
+}
+.about-values {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  padding: 45px var(--gutter) 80px;
+  color: var(--cream);
+  background: var(--espresso);
+}
+.about-values-background {
+  position: absolute;
+  inset: -9px;
+  width: calc(100% + 18px);
+  max-width: none;
+  height: calc(100% + 18px);
+  object-fit: cover;
+}
+.about-values > h2,
+.values-grid {
+  position: relative;
+}
+.about-values > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 52px;
+}
+.value-card {
+  min-height: 300px;
+  border: 1px solid #f5f0e84d;
+  border-radius: 4px;
+  padding: 30px 28px 24px;
+  text-align: center;
+  background: #f5f0e821;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.value-icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 40px;
+}
+.value-card h3 {
+  font-family: var(--font-seasons), Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.value-card p {
+  font-size: 14px;
+  line-height: 1.3;
+  max-width: 195px;
+  margin-inline: auto;
+}
+.about-faith {
+  position: relative;
+  min-height: 330px;
+  padding: 58px var(--gutter) 44px;
+}
+.about-faith > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-faith > div {
+  position: relative;
+}
+.about-faith h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 22px;
+}
+.about-faith blockquote {
+  font-family: var(--font-seasons), Georgia, serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.faith-citation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  font-size: 11px;
+}
+.faith-citation > span {
+  width: 44px;
+  height: 1px;
+  background: currentColor;
+}
+@media (hover: hover) {
+  .about-image:hover img {
+    transform: scale(1.025);
+  }
+  .value-card:hover {
+    background: #f5f0e830;
+    transform: translateY(-4px);
+  }
+}
+@media (min-width: 1600px) {
+  .about-hero {
+    height: 46vw;
+  }
+  .about-hero h1 {
+    font-size: 5.55vw;
+  }
+}
+@media (max-width: 1100px) {
+  .about-hero {
+    height: 590px;
+  }
+  .about-copy {
+    padding: 48px 5vw;
+  }
+  .about-copy h2 {
+    font-size: 40px;
+  }
+  .about-copy > p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .values-grid {
+    gap: 24px;
+  }
+  .value-card {
+    padding-inline: 16px;
+  }
+  .value-card h3 {
+    font-size: 21px;
+  }
+  .about-quote blockquote {
+    font-size: 38px;
+  }
+}
+@media (max-width: 760px) {
+  .about-hero {
+    min-height: 570px;
+    height: calc(85svh - var(--header));
+    max-height: 740px;
+    align-items: flex-end;
+  }
+  .about-hero-image {
+    inset: 0;
+    height: 100%;
+    object-position: 58% center;
+    will-change: auto;
+  }
+  .about-hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #24160f9c, transparent 90%);
+  }
+  .about-hero-copy {
+    margin-inline: var(--gutter);
+    padding: 50px 0;
+  }
+  .about-hero .eyebrow {
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  .about-hero h1 {
+    font-size: clamp(42px, 9.5vw, 66px);
+  }
+  .about-rule {
+    margin: 28px 0 22px;
+    width: 55px;
+  }
+  .about-introduction {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 370px;
+  }
+  .about-quote {
+    min-height: 145px;
+    padding-block: 34px;
+  }
+  .about-quote blockquote {
+    font-size: clamp(25px, 5.7vw, 36px);
+    line-height: 1.12;
+  }
+  .about-split {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .about-copy,
+  .about-founder .about-copy {
+    padding: 50px var(--gutter);
+  }
+  .about-copy h2 {
+    font-size: clamp(36px, 8.5vw, 48px);
+    margin-bottom: 26px;
+  }
+  .about-copy .eyebrow {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .about-copy > p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .about-image img {
+    height: auto;
+    aspect-ratio: 720/560;
+  }
+  .about-founder .about-image img {
+    aspect-ratio: 720/700;
+  }
+  .about-values {
+    padding: 38px var(--gutter) 44px;
+  }
+  .about-values > h2 {
+    font-size: 10px;
+    margin-bottom: 26px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .value-card {
+    min-height: 265px;
+    padding: 24px 12px;
+  }
+  .value-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 25px;
+  }
+  .value-card h3 {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+  .value-card p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .about-faith {
+    min-height: 300px;
+    padding: 44px var(--gutter);
+  }
+  .about-faith h2 {
+    font-size: 10px;
+  }
+  .about-faith blockquote {
+    font-size: clamp(26px, 6.6vw, 39px);
+    line-height: 1.12;
+  }
+  .faith-citation {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-image,
+  .about-image img,
+  .value-card {
+    transform: none !important;
+    will-change: auto;
+  }
+}

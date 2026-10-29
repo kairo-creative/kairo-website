@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "./Language";
@@ -6,6 +8,7 @@ import { navigation } from "../content/home";
 import { asset } from "../lib/assets";
 export default function Header() {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const nav = useRef<HTMLElement>(null);
@@ -47,14 +50,14 @@ export default function Header() {
   }, [open]);
   return (
     <header className="header">
-      <a className="brand" href="#home" aria-label="Kairo Creative — home">
+      <Link className="brand" href="/#home" aria-label="Kairo Creative — home">
         <img
           src={asset("/images/monogram-cream.png")}
           width="55"
           height="35"
           alt="Kairo Creative"
         />
-      </a>
+      </Link>
       <nav
         ref={nav}
         id="main-navigation"
@@ -62,9 +65,19 @@ export default function Header() {
         className={open ? "navigation is-open" : "navigation"}
       >
         {navigation.map((item) => (
-          <a href={item.href} key={item.label} onClick={() => setOpen(false)}>
+          <Link
+            href={item.href}
+            key={item.label}
+            onClick={() => setOpen(false)}
+            aria-current={
+              (item.label === "About" && pathname.startsWith("/about")) ||
+              (item.label === "Home" && pathname === "/")
+                ? "page"
+                : undefined
+            }
+          >
             {item.label}
-          </a>
+          </Link>
         ))}
       </nav>
       <LanguageSwitcher />

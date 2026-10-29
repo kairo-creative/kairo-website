@@ -216,6 +216,8 @@ footer nav a:hover:after {
   border-color: var(--cream);
 }
 .button.outlined {
+  background: transparent;
+  border-radius: 0;
   color: var(--cream);
 }
 .button:hover {

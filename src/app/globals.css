@@ -471,7 +471,7 @@ footer {
   display: flex;
   gap: 32px;
 }
-.socials > span {
+.socials > :is(span, a) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -833,7 +833,7 @@ footer {
     width: 23px;
     height: 23px;
   }
-  .socials > span {
+  .socials > :is(span, a) {
     min-width: 30px;
   }
   .footer-bottom {

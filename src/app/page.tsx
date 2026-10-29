@@ -43,7 +43,7 @@ export default function Home() {
           <h2 id="intro-title">
             {t("Ontworpen met intentie.")}
             <br />
-            {t("Gebouwd voor")} <em>{t("impact.")}</em>
+            {t("Gebouwd voor")}{" "}<em>{t("impact.")}</em>
           </h2>
           <div className="intro-body">
             <p>
@@ -99,7 +99,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">{t("Klaar om samen te werken?")}</p>
             <h2>
-              {t("Samen jouw visie")} <em>{t("versterken.")}</em>
+              {t("Samen jouw visie")}{" "}<em>{t("versterken.")}</em>
             </h2>
           </div>
           <ContactCTA />

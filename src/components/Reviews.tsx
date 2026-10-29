@@ -21,7 +21,7 @@ export default function Reviews() {
       <div className="review-heading">
         <p className="eyebrow">{t("Klanten review")}</p>
         <h2 id="review-title">
-          {t("Vertrouwen in")} <em>{t("creatie.")}</em>
+          {t("Vertrouwen in")}{" "}<em>{t("creatie.")}</em>
         </h2>
       </div>
       <div className="review-controls">
